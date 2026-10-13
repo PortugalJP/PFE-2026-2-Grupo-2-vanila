@@ -17,3 +17,25 @@ body {
   background-color: #f4f8fb; /* Fundo igual ao da página */
   padding: 1.5rem 3rem;
 }
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem; /* Espaçamento largo entre os itens */
+  align-items: center;
+}
+
+/* Estilo padrão dos links */
+.nav-links a {
+  color: #0b3c5d; /* Tom de azul escuro dos textos */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 6px; /* Espaço para a barrinha ativa */
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #0077cc;
+}
