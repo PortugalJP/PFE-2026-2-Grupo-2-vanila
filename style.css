@@ -1,5 +1,19 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f8fb; /* Fundo claro da página */
+}
+
+/* Barra de navegação principal */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f8fb; /* Fundo igual ao da página */
+  padding: 1.5rem 3rem;
 }
