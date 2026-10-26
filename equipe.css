@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #06131b;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+
+header {
+    background-color: #06131b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+}
+
+header h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+header h3:first-child {
+    color: #00baff;
+}
+
+header h3:nth-child(2) {
+    font-size: 14px;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #c5e2ee;
+    font-size: 12px;
+}
+
+.nav-links a:hover {
+    color: #00baff;
+}
+
+
+/* APRESENTAÇÃO */
+
+.apresentacao {
+    background-color: #0b2433;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 75px 8%;
+    gap: 40px;
+    min-height: 300px;
+}
+
+.texto-apresentacao {
+    width: 480px;
+    max-width: 100%;
+    flex-shrink: 0;
+}
+
+
+.texto-apresentacao > p:first-child {
+    color: #91c5d9;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.texto-apresentacao h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 0.95;
+    margin-bottom: 22px;
+    color: white;
+}
+
+.texto-apresentacao h1 span {
+    color: #00baff;
+}
+
+.texto-apresentacao > p:last-child {
+    max-width: 420px;
+    color: #b2d4e2;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.indicadores {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.indicador h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 34px;
+    font-weight: 900;
+    color: #00baff;
+}
+
+.indicador p {
+    color: #b2d4e2;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.indicador p {
+    font-size: 11px;
+    color: #b2d4e2;
+    line-height: 1.4;
+}
+
+
+@media (max-width: 900px) {
+    .apresentacao {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .texto-apresentacao {
+        width: 100%;
+        flex-shrink: 1;
+    }
+
+    .texto-apresentacao h1 {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 600px) {
+    .apresentacao {
+        padding: 50px 5%;
+    }
+
+    .texto-apresentacao h1 {
+        font-size: 44px;
+    }
+
+    .indicadores {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* SEÇÃO DOS TREINADORES */
+
+.equipe {
+    background-color: #06131b;
+    padding: 70px 8%;
+}
+
+.equipe > h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: white;
+}
+
+/* BOTÕES DE FILTRO */
+
+.equipe > div:first-of-type {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.equipe button {
+    background-color: #102b3a;
+    color: #c5e2ee;
+    border: 1px solid #24495a;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.equipe button:first-child {
+    background-color: #00baff;
+    color: #06131b;
+    font-weight: bold;
+}
+
+.equipe button:hover {
+    background-color: #00baff;
+    color: #06131b;
+}
+
+/* ORGANIZAÇÃO DOS SEIS CARDS */
+
+.grid-treinadores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* CADA CARD */
+
+.treinador {
+    background-color: #0b2433;
+    border: 1px solid #214254;
+    border-radius: 14px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+/* FOTOS DOS TREINADORES */
+
+.treinador img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* TEXTOS DOS CARDS */
+
+.treinador h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 23px;
+    margin: 10px 15px;
+    color: white;
+}
+
+.treinador p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #b2d4e2;
+    margin: 10px 15px;
+}
+
+/* CATEGORIA PKZ / ONE TO ONE */
+
+.treinador p:first-of-type {
+    display: inline-block;
+    background-color: #00baff;
+    color: #06131b;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* LINKS DOS CARDS */
+
+.treinador a {
+    display: inline-block;
+    margin: 10px 15px;
+    text-decoration: none;
+    color: #00baff;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.treinador a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .grid-treinadores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .equipe {
+        padding: 50px 5%;
+    }
+
+    .grid-treinadores {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* METODOLOGIA */
+
+.metodologia {
+    background-color: #0b2433;
+    padding: 80px 8%;
+}
+
+/* COMO TRABALHAMOS */
+
+.metodologia > p {
+    color: #00baff;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+/* TÍTULO */
+
+.metodologia > h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 35px;
+}
+
+/* ORGANIZAÇÃO DOS CARDS */
+
+.passos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* CARDS */
+
+.passo {
+    background-color: #06131b;
+    border: 1px solid #214254;
+    border-radius: 15px;
+    padding: 25px;
+    min-height: 180px;
+}
+
+/* NÚMEROS */
+
+.passo h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    color: #00baff;
+    margin-bottom: 12px;
+}
+
+/* NOMES DOS PASSOS */
+
+.passo h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 12px;
+}
+
+/* DESCRIÇÃO */
+
+.passo p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #b2d4e2;
+}
+
+/* TERCEIRO CARD AZUL */
+
+.passo.destaque {
+    background-color: #00baff;
+    border-color: #00baff;
+}
+
+.passo.destaque h3,
+.passo.destaque h4,
+.passo.destaque p {
+    color: #06131b;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .passos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .metodologia {
+        padding: 55px 5%;
+    }
+
+    .passos {
+        grid-template-columns: 1fr;
+    }
+
+    .metodologia > h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* SEÇÃO DE AGENDAMENTO */
+
+.agendamento {
+    background-color: #00baff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* TÍTULO */
+
+.agendamento h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1;
+    color: #06131b;
+    margin-bottom: 20px;
+}
+
+/* DESCRIÇÃO */
+
+.agendamento p {
+    color: #103447;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* BOTÃO */
+
+.agendamento a {
+    display: inline-block;
+    background-color: #06131b;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 16px 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.agendamento a:hover {
+    background-color: #16465f;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .agendamento {
+        padding: 60px 20px;
+    }
+
+    .agendamento h2 {
+        font-size: 36px;
+    }
+
+    .agendamento p {
+        font-size: 12px;
+    }
+}
