@@ -9,7 +9,7 @@
 
   --bg: #ffffff;
   --bg-alt: #f0f8fc;
-  --bg-deep: #e4eef5;        s
+  --bg-deep: #e4eef5;        
   --bg-header: #ffffff;
   --card: #ffffff;
   --card-line: #d3e3ee;
@@ -30,8 +30,9 @@
 
   --gutter: 20px;           
   --side: 20px;              
-  --header-h: 64px;
+  --header-h: 64px; 
 }
+
 
 :root[data-theme="dark"] {
   --bg: #0a2234;
