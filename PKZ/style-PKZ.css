@@ -25,8 +25,9 @@
   --font-head: "Barlow Condensed", "Arial Narrow", sans-serif;
   --font-body: "Manrope", system-ui, sans-serif;
  
-  /* Side spacing that keeps content centered, max 1200px wide */
-  --gutter: max(24px, calc((100% - 1200px) / 2));
+  --gutter: 20px;            /* side spacing of full-width sections */
+  --side: 20px;              /* side spacing of .container (grows on bigger screens) */
+  --header-h: 64px;
 }
  
 :root[data-theme="dark"] {
@@ -67,62 +68,80 @@ h1, h2, h3 {
   line-height: 1;
   text-transform: uppercase;
 }
-h2 { font-size: clamp(36px, 5vw, 56px); }
+h2 { font-size: clamp(34px, 9vw, 56px); }
  
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
  
-/* ---------- 3. Header ---------- */
-.site-header {
+/* ---------- 3. Header (mobile: hamburger) ---------- */
+.container {
+  width: min(1200px, 100% - 2 * var(--side));
+  margin-inline: auto;
+}
+ 
+.header {
   position: sticky;
   top: 0;
   z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  height: 80px;
-  padding-inline: var(--gutter);
   background: var(--bg-header);
   border-bottom: 1px solid var(--card-line);
 }
-.logo {
+.header__inner {
   display: flex;
   align-items: center;
   gap: 12px;
+  height: var(--header-h);
+}
+ 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-head);
   font-weight: 700;
 }
-.logo-main {
-  padding-right: 12px;
+.logo b {
+  padding-right: 10px;
   border-right: 2px solid var(--card-line);
   color: var(--brand);
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1.1;
 }
-.logo-secondary {
-  font-size: 18px;
-  letter-spacing: 0.18em;
+.logo span {
+  font-size: 15px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
  
-.main-nav { margin-inline: auto; }
-.nav-links {
-  display: flex;
-  gap: 32px;
-  font-size: 14px;
+/* Mobile nav = dropdown under the header, closed by default */
+.nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px var(--side) 20px;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--card-line);
+  font-size: 16px;
   font-weight: 500;
 }
-.nav-links a {
-  padding: 6px 0;
+.nav.is-open { display: flex; }
+.nav a {
+  width: fit-content;
+  padding: 10px 0;
   border-bottom: 2px solid transparent;
 }
-.nav-links a:hover { color: var(--accent); }
-.nav-links a[aria-current="page"] { border-color: var(--accent); }
+.nav a:hover { color: var(--accent); }
+.nav a.is-active { border-color: var(--accent); }
  
-.theme-toggle {
+.icon-btn {
   display: grid;
   place-items: center;
-  width: 46px;
-  height: 46px;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;          /* pushes theme button + hamburger to the right */
   border: 0;
   border-radius: 50%;
   background: var(--toggle-bg);
@@ -130,9 +149,31 @@ h2 { font-size: clamp(36px, 5vw, 56px); }
   cursor: pointer;
 }
  
+/* Hamburger button (2 bars that turn into an X when open) */
+.menu-btn {
+  display: grid;
+  place-content: center;
+  gap: 6px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.menu-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  transition: transform 0.2s;
+}
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(4px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
+ 
 /* ---------- 4. Buttons ---------- */
 .button {
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   gap: 10px;
   padding: 14px 24px;
@@ -140,6 +181,7 @@ h2 { font-size: clamp(36px, 5vw, 56px); }
   border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
+  text-align: center;
   cursor: pointer;
   transition: transform 0.15s, background 0.2s, color 0.2s, border-color 0.2s;
 }
@@ -154,8 +196,9 @@ h2 { font-size: clamp(36px, 5vw, 56px); }
   color: var(--on-accent);
 }
  
-.button-dark { padding: 18px 32px; background: #000; color: #fff; }
+.button-dark { padding: 16px 28px; background: #000; color: #fff; }
  
+/* ---------- 5. Shared section pieces ---------- */
 .section-eyebrow {
   margin-bottom: 12px;
   color: var(--accent);
@@ -166,12 +209,12 @@ h2 { font-size: clamp(36px, 5vw, 56px); }
  
 .section-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 24px;
-  margin-bottom: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 32px;
 }
-.section-note { max-width: 330px; padding-bottom: 8px; color: var(--muted); font-size: 14px; }
+.section-note { color: var(--muted); font-size: 14px; }
  
 .audience-age {
   padding: 9px 16px;
