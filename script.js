@@ -1,5 +1,4 @@
-console.log("Hello, World!");
-// Mapa: ao clicar, troca o botão pelo Google Maps
+
 const mapa = document.getElementById("mapa");
 const botaoMapa = document.getElementById("botao-mapa");
 
