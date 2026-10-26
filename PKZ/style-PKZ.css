@@ -84,3 +84,102 @@ h2 { font-size: clamp(36px, 5vw, 56px); }
   background: var(--bg-header);
   border-bottom: 1px solid var(--card-line);
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-head);
+  font-weight: 700;
+}
+.logo-main {
+  padding-right: 12px;
+  border-right: 2px solid var(--card-line);
+  color: var(--brand);
+  font-size: 28px;
+  line-height: 1.1;
+}
+.logo-secondary {
+  font-size: 18px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+ 
+.main-nav { margin-inline: auto; }
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.nav-links a {
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-links a[aria-current="page"] { border-color: var(--accent); }
+ 
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--toggle-bg);
+  color: var(--toggle-fg);
+  cursor: pointer;
+}
+ 
+/* ---------- 4. Buttons ---------- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border: 1.5px solid transparent;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.2s, color 0.2s, border-color 0.2s;
+}
+.button:hover { transform: translateY(-2px); }
+ 
+.button-primary { background: var(--accent); color: var(--on-accent); }
+ 
+.button-outline { border-color: currentColor; color: inherit; }
+.button-outline:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+ 
+.button-dark { padding: 18px 32px; background: #000; color: #fff; }
+ 
+.section-eyebrow {
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+ 
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.section-note { max-width: 330px; padding-bottom: 8px; color: var(--muted); font-size: 14px; }
+ 
+.audience-age {
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
