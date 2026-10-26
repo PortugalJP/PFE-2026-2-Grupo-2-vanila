@@ -24,7 +24,7 @@
   </div>
 </header>
     <main>
-        <section class="hero">
+        <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
             <p class="hero-brand">
               PKZ · JOVENS ATLETAS
@@ -44,9 +44,16 @@
                 <li>16 testes físicos</li>
                 <li>Treinamento complexo</li>
             </ul>
-            <a class="hero-button" href="#metodologia">
+            <div class="hero-actions">
+            <a class="button button-primary" href="#cta">
+              <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+              Agendar aula experimental PKZ
+            </a>
+            <a class="button button-outline" href="#metodologia">
               Ver a metodologia
             </a>
+          </div>
+        </div>
         </div>
         <div class="hero-image">
             <img
@@ -55,29 +62,31 @@
             >
         </div>
     </section>
-    <section id="publico">
-       <div class="audience-header" class="audience">
-        <p class="section-eyebrow">PÚBLICO-ALVO</p>
-        <h2>PARA QUEM É A PKZ</h2>
-        <p class="audience-age">7 A 15 ANOS</p>
-    </div>
+    <section class="audience" id="audience" aria-labelledby="audience-title">
+        <div class="section-header">
+          <div>
+            <p class="section-eyebrow">PÚBLICO-ALVO</p>
+            <h2 id="audience-title">PARA QUEM É A PKZ</h2>
+          </div>
+          <p class="audience-age">7 a 15 anos</p>
+        </div>
     <ul class="audience-list">
-        <li class="audience-card">
+          <li class="audience-card audience-card-highlight">
+            <span class="card-number">01</span>
             <h3>JOVENS ATLETAS</h3>
-             <p>
-                Crianças e adolescentes que desejam desenvolver
-                suas capacidades físicas e evoluir na prática
-                esportiva com segurança.
+            <p>
+              Crianças e adolescentes de 7 a 15 anos que praticam uma
+              modalidade esportiva e querem evoluir no desempenho.
             </p>
         </li>
         <li class="audience-card">
+            <span class="card-number">02</span>
             <h3>PAIS E RESPONSÁVEIS</h3>
             <p>
-                Acompanhamento orientado para apoiar o
-                desenvolvimento físico e esportivo dos jovens,
-                respeitando cada etapa do crescimento.
+              Quem tem rigor técnico e atlético que quer ver de fato a
+              evolução do filho a cada avaliação.
             </p>
-        </li>
+          </li>
         <li class="audience-card">
           <h3>CLUBES E ESCOLINHAS</h3>
             <p>
