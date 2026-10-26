@@ -1,11 +1,4 @@
-/* ==========================================================
-   PKZ | One to One - shared stylesheet (MOBILE FIRST)
-   Used by pkz.html and one-to-one.html (same structure, different content)
-   Base styles = mobile. Larger screens are added with min-width queries:
-     - 640px  -> large phones / small tablets
-     - 980px  -> desktop (hamburger disappears)
-   Light theme is the default; dark theme = <html data-theme="dark">
-   ========================================================== */
+
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap");
 
