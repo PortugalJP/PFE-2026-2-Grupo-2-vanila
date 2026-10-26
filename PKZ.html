@@ -7,83 +7,101 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-   <header class="header">
-  <div class="container header__inner">
-    <a href="#inicio" class="logo"><b>PKZ</b><span>One to One</span></a>
-    <nav class="nav" id="nav" aria-label="Principal">
-      <a href="#">Início</a>
-      <a href="#">PKZ</a>
-      <a href="#inicio" class="is-active" aria-current="page">One to One</a>
-      <a href="#">Equipe</a>
-      <a href="#">Dúvidas</a>
-    </nav>
-    <button class="icon-btn" id="themeToggle" aria-label="Alternar tema claro/escuro">
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-    </button>
-    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
-  </div>
-</header>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#inicio" class="logo"><b>PKZ</b><span>One to One</span></a>
+        <nav class="nav" id="nav" aria-label="Principal">
+          <a href="#">Início</a>
+          <a href="#">PKZ</a>
+          <a href="#inicio" class="is-active" aria-current="page">One to One</a>
+          <a href="#">Equipe</a>
+          <a href="#">Dúvidas</a>
+        </nav>
+        <button
+          class="icon-btn"
+          id="themeToggle"
+          aria-label="Alternar tema claro/escuro"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+            />
+          </svg>
+        </button>
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
     <main>
-        <section class="hero" aria-labelledby="hero-title">
+      <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
-            <p class="hero-brand">
-              PKZ · JOVENS ATLETAS
-            </p>
-            <h1 class="hero-title">
-                ALTO RENDIMENTO
-                DESDE A <span>BASE</span>
-            </h1>
-            <p class="hero-description">
-                Treinamento complexo e preparação física para
-                crianças e adolescentes que praticam esporte —
-                com foco em performance, coordenação e prevenção
-                de lesões.
-            </p>
-             <ul class="features">
-                <li>7 a 15 anos</li>
-                <li>16 testes físicos</li>
-                <li>Treinamento complexo</li>
-            </ul>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#cta">
+          <p class="hero-brand">PKZ · JOVENS ATLETAS</p>
+          <h1 class="hero-title">ALTO RENDIMENTO DESDE A <span>BASE</span></h1>
+          <p class="hero-description">
+            Treinamento complexo e preparação física para crianças e
+            adolescentes que praticam esporte — com foco em performance,
+            coordenação e prevenção de lesões.
+          </p>
+          <ul class="features">
+            <li>7 a 15 anos</li>
+            <li>16 testes físicos</li>
+            <li>Treinamento complexo</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#cta">
               <i class="fa-regular fa-calendar" aria-hidden="true"></i>
               Agendar aula experimental PKZ
-              </a>
-              <a class="button button-outline" href="#metodologia">
+            </a>
+            <a class="button button-outline" href="#metodologia">
               Ver a metodologia
-              </a>
-            </div>
+            </a>
+          </div>
         </div>
         <div class="hero-image">
-            <img
-                src="imagens/jovem-atleta.jpg"
-                alt="Jovem atleta durante um treino físico"
-            >
+          <img
+            src="imagens/jovem-atleta.jpg"
+            alt="Jovem atleta durante um treino físico"
+          />
         </div>
-        </section>
-        <section class="audience" id="audience" aria-labelledby="audience-title">
-          <div class="section-header">
+      </section>
+      <section class="audience" id="audience" aria-labelledby="audience-title">
+        <div class="section-header">
           <div>
             <p class="section-eyebrow">PÚBLICO-ALVO</p>
             <h2 id="audience-title">PARA QUEM É A PKZ</h2>
           </div>
           <p class="audience-age">7 a 15 anos</p>
-          </div>
-          <ul class="audience-list">
+        </div>
+        <ul class="audience-list">
           <li class="audience-card audience-card-highlight">
             <span class="card-number">01</span>
             <h3>JOVENS ATLETAS</h3>
             <p>
-              Crianças e adolescentes de 7 a 15 anos que praticam uma
-              modalidade esportiva e querem evoluir no desempenho.
+              Crianças e adolescentes de 7 a 15 anos que praticam uma modalidade
+              esportiva e querem evoluir no desempenho.
             </p>
           </li>
           <li class="audience-card">
             <span class="card-number">02</span>
             <h3>PAIS E RESPONSÁVEIS</h3>
             <p>
-             Quem acompanha o atleta e quer ver, de forma clara, 
-             como ele está evoluindo a cada avaliação.
+              Quem acompanha o atleta e quer ver, de forma clara, como ele está
+              evoluindo a cada avaliação.
             </p>
           </li>
           <li class="audience-card">
@@ -94,50 +112,51 @@
               equipes esportivas.]
             </p>
           </li>
-         </ul>
-        </section>
+        </ul>
+      </section>
 
-        <section class="history" id="history" aria-labelledby="history-title">
-         <div class="history-content">
+      <section class="history" id="history" aria-labelledby="history-title">
+        <div class="history-content">
           <p class="section-eyebrow">ONDE COMEÇAMOS</p>
           <h2 id="history-title">A HISTÓRIA E O FOCO DA PKZ</h2>
           <p>
             [Conte aqui como a PKZ começou: ano da fundação, quem criou o
             programa e o que motivou o foco em jovens atletas.]
           </p>
- 
+
           <blockquote class="manifesto">
             <p class="manifesto-label">MANIFESTO</p>
             <p class="manifesto-text">
               FORMAR ATLETAS COMPLETOS: FORÇA, VELOCIDADE, COORDENAÇÃO E
-              PREVENÇÃO DE LESÕES, RESPEITANDO A FASE DE DESENVOLVIMENTO DE
-              CADA CRIANÇA E ADOLESCENTE.
+              PREVENÇÃO DE LESÕES, RESPEITANDO A FASE DE DESENVOLVIMENTO DE CADA
+              CRIANÇA E ADOLESCENTE.
             </p>
           </blockquote>
-         </div>
- 
-        <aside class="timeline" aria-labelledby="timeline-title">
-          <h3 id="timeline-title">LINHA DO TEMPO</h3>
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <strong class="timeline-year">[ANO]</strong>
-              <p>[Marco importante da história da PKZ]</p>
-            </li>
-            <li class="timeline-item">
-              <strong class="timeline-year">[ANO]</strong>
-              <p>[Marco importante da história da PKZ]</p>
-            </li>
-            <li class="timeline-item">
-              <strong class="timeline-year">[ANO]</strong>
-              <p>[Marco importante da história da PKZ]</p>
-            </li>
-            <li class="timeline-item">
-              <strong class="timeline-year">[ANO]</strong>
-              <p>[Marco importante da história da PKZ]</p>
-            </li>
-          </ol>
-        </aside>
-        <section
+        </div>
+      </section>
+
+      <aside class="timeline" aria-labelledby="timeline-title">
+        <h3 id="timeline-title">LINHA DO TEMPO</h3>
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <strong class="timeline-year">[ANO]</strong>
+            <p>[Marco importante da história da PKZ]</p>
+          </li>
+          <li class="timeline-item">
+            <strong class="timeline-year">[ANO]</strong>
+            <p>[Marco importante da história da PKZ]</p>
+          </li>
+          <li class="timeline-item">
+            <strong class="timeline-year">[ANO]</strong>
+            <p>[Marco importante da história da PKZ]</p>
+          </li>
+          <li class="timeline-item">
+            <strong class="timeline-year">[ANO]</strong>
+            <p>[Marco importante da história da PKZ]</p>
+          </li>
+        </ol>
+      </aside>
+      <section
         class="methodology"
         id="methodology"
         aria-labelledby="methodology-title"
@@ -178,21 +197,33 @@
             </p>
           </li>
         </ol>
-        </section>
+      </section>
 
-        <section id="contato">
-        
-        </section>
+      <section id="contato"></section>
 
-        <section class="cta-final">
-        
-        </section>
+      <section class="cta-final"></section>
     </main>
-
-    <footer>
-    
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>
+          <a href="#inicio" class="logo"><b>PKZ</b><span>One to One</span></a>
+          <p>
+            Uma metodologia, dois programas: alto rendimento infantojuvenil e
+            musculação para adultos.
+          </p>
+        </div>
+        <div class="footer__cols">
+          <div>
+            <h4>Navegação</h4>
+            <a href="#">PKZ</a><a href="#">One to One</a><a href="#">Equipe</a>
+          </div>
+          <div>
+            <h4>Contato</h4>
+            <a href="#">[WhatsApp]</a><a href="#">[@instagram]</a
+            ><a href="#">[E-mail]</a>
+          </div>
+        </div>
+      </div>
     </footer>
-</main>
-    </main>
   </body>
 </html>
