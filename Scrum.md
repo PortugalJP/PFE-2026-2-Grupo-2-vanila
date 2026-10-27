@@ -73,3 +73,5 @@ Uma aba está pronta quando funciona (HTML, CSS e JS), está commitada no GitHub
 - **O que deu certo:** a divisão por abas deixou cada um com uma responsabilidade clara, e o GitHub facilitou juntar o trabalho de todos.
 - **O que pode melhorar:** combinar o padrão de CSS antes de começar as abas e usar o GitHub desde a primeira semana, com commits e merges frequentes, em vez de guardar o código só localmente.
 - **Aprendizado:** organizar o trabalho em sprints ajudou a cumprir o prazo e a enxergar o que faltava em cada etapa.
+
+link do site: https://share.google/F9lFaqV5NyRBnG8Hu
