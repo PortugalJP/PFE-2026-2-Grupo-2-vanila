@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agendamento | PKZ · One to One</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-AGD.css">
+  <script>try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script> <!-- Tema -->
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="../landing-page.html" class="logo"><b>PKZ</b><span>One to One</span></a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="../landing-page.html">Início</a>
+      <a href="../PKZ.html">PKZ</a>
+      <a href="../OnetoOne.html">One to One</a>
+      <a href="../equipe.html">Equipe</a>
+      <a href="../duvidas.html">Dúvidas</a>
+    </nav>
+    <button class="icon-btn" id="themeToggle" aria-label="Alternar tema claro/escuro">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <p class="eyebrow">Aula experimental</p>
+  <h1>Escolha o melhor dia para você</h1>
+
+  <!-- Programa -->
+  <fieldset class="programas">
+    <legend>Programa</legend>
+    <label class="programa">
+      <input type="radio" name="programa" value="pkz" data-nome="PKZ" data-detalhe="PKZ · 7 a 15 anos" data-rotulo="Nome do atleta" checked>
+      <b>PKZ</b><span>Jovens atletas · 7 a 15 anos</span>
+    </label>
+    <label class="programa">
+      <input type="radio" name="programa" value="onetoone" data-nome="One to One" data-detalhe="One to One · 17 a 90 anos" data-rotulo="Seu nome">
+      <b>One to One</b><span>Adultos · 17 a 90 anos</span>
+    </label>
+  </fieldset>
+
+  <!-- Calendário -->
+  <section class="calendario card" aria-labelledby="mesTitulo">
+    <div class="calendario-topo">
+      <h2 id="mesTitulo"></h2>
+      <div class="calendario-nav">
+        <button type="button" id="mesAnterior" aria-label="Mês anterior">‹</button>
+        <button type="button" id="mesProximo" aria-label="Próximo mês">›</button>
+      </div>
+    </div>
+    <table id="calendario" aria-label="Calendário do mês">
+      <thead><tr><th>DOM</th><th>SEG</th><th>TER</th><th>QUA</th><th>QUI</th><th>SEX</th><th>SÁB</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <p class="legenda">
+      <span><i class="ponto"></i>Horários disponíveis</span>
+      <span><i class="quadrado"></i>Selecionado</span>
+      <span>Domingo: fechado</span>
+    </p>
+  </section>
+
+  <!-- Horários -->
+  <section class="horarios card" aria-labelledby="horariosTitulo">
+    <h2 id="horariosTitulo">Horários</h2>
+    <p id="dataTexto"></p>
+    <div id="horarios"></div>
+  </section>
+
+  <!-- Resumo -->
+  <section class="resumo card" aria-labelledby="resumoTitulo">
+    <h2 id="resumoTitulo">Seu agendamento</h2>
+    <form id="form" novalidate>
+      <dl>
+        <dt>Programa</dt><dd id="resumoPrograma"></dd>
+        <dt>Data</dt><dd id="resumoData"></dd>
+        <dt>Horário</dt><dd id="resumoHorario"></dd>
+      </dl>
+      <label for="nome" id="rotuloNome">Nome do atleta</label>
+      <input id="nome" placeholder="Digite o nome" autocomplete="off">
+      <label for="email">E-mail</label>
+      <input id="email" type="email" placeholder="seuemail@exemplo.com" autocomplete="off">
+      <label for="telefone">Telefone</label>
+      <input id="telefone" type="tel" placeholder="(21) 90000-0000" autocomplete="off">
+      <button type="submit" class="btn">Enviar</button>
+      <p id="mensagem" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <a href="../landing-page.html" class="logo"><b>PKZ</b><span>One to One</span></a>
+      <p>Uma metodologia, dois programas: alto rendimento infantojuvenil e musculação para adultos.</p>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h4>Navegação</h4>
+        <a href="../PKZ.html">PKZ</a><a href="../OnetoOne.html">One to One</a><a href="../equipe.html">Equipe</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <a href="#">[WhatsApp]</a><a href="#">[@instagram]</a><a href="#">[E-mail]</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="agendamento.js"></script>
+</body>
+</html>
