@@ -1,76 +1,70 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Equipe</title>
-  <link rel="stylesheet" href="equipe.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
-<body>
+<body class="pagina-equipe">
+  <header class="cabecalho">
+    <a href="index.html" class="logo"><b>PKZ</b><span>One to One</span></a>
 
-
-  <header>
-    <div class="logo">
-      <h3>PKZ</h3>
-      <span>|</span>
-      <h3>ONE TO ONE</h3>
-    </div>
-
-    <nav>
-      <ul class="nav-links">
-        <li><a href="inicio.html">Início</a></li>
-        <li><a href="PKZ.html">PKZ</a></li>
-        <li><a href="OnetoOne.html">One to One</a></li>
-        <li><a href="equipe.html" class="ativo">Equipe</a></li>
-        <li><a href="duvidas.html">Dúvidas</a></li>
+    <!-- Menu -->
+    <nav id="nav" class="menu" aria-label="Menu principal">
+      <ul class="menu-lista">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="PKZ.html">PKZ</a></li>
+      <li><a href="OnetoOne.html">One to One</a></li>
+      <li><a href="equipe.html" class="active">Equipe</a></li>
+      <li><a href="index.html#duvidas">Dúvidas</a></li>
       </ul>
     </nav>
 
-    <button class="tema" type="button" aria-label="Alternar tema">
-      ☼
+    <!-- Botão do menu hambúrguer (só no celular) -->
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false">
+      <span></span><span></span>
     </button>
   </header>
 
-
-
   <main>
-    <!-- Aprsentação -->
+    <!-- Apresentação -->
     <section class="apresentacao">
 
       <div class="texto-apresentacao">
-
         <p>METODOLOGIA E EQUIPE</p>
 
-        <h1>
-          QUEM CUIDA<br>
-          DO <span>SEU TREINO</span>
+
+        <h1>QUEM CUIDA <br>
+          DO <span>SEU TREINO </span>
         </h1>
 
-        <p>
-          Treinadores e preparadores físicos
-          especializados em cada programa –
-          jovens atletas na PKZ e adultos na
-          One to One – trabalhando com a
-          mesma metodologia.
-        </p>
-
+        <p>Treinadores e preparadores físicos especializados em cada
+          programa - jovens atletas na PKZ e adultos na One to One -
+          trabalhando com a mesma metodologia</p>
       </div>
 
       <div class="indicadores">
 
+
         <div class="indicador">
-          <h2>[N]</h2>
+          <h2>3</h2>
           <p>Treinadores PKZ</p>
         </div>
 
+
         <div class="indicador">
-          <h2>[N]</h2>
+          <h2>3</h2>
           <p>Treinadores One to One</p>
         </div>
 
       </div>
+
 
     </section>
 
@@ -79,10 +73,10 @@
     <section class="equipe">
       <h2>Nossos Treinadores</h2>
 
-      <div>
-        <button>Todos</button>
-        <button>PKZ</button>
-        <button>One to One</button>
+      <div class="filtros">
+        <button class="ativo" data-filtro="todos">Todos</button>
+        <button data-filtro="pkz">PKZ</button>
+        <button data-filtro="onetoone">One to One</button>
       </div>
 
 
@@ -90,166 +84,118 @@
       <!--Treinador1-->
 
       <div class="grid-treinadores">
-        <article class="treinador">
-          <img src="img/treinador1.png" alt="Treinador 1" />
+        <article class="treinador" data-programa="pkz">
+          <img src="imagens/treinador1.png" alt="Rafael Monteiro, treinador da PKZ" />
 
           <p>PKZ</p>
 
-          <h3>NOME DO TREINADOR</h3>
+          <h3>Rafael Monteiro</h3>
 
-          <p>[Especialidade - ex.: preparação física
-            para jovens atletas]</p>
+          <p>Preparação física para jovens atletas</p>
 
-          <p>
-            [Breve apresentação, formação,
-            experiência e como trabalha
-            com os alunos.]
-          </p>
+          <p>Formado em Educação Física, especialista em treinamento esportivo. Trabalha há 10 anos com atletas de base do futebol e do vôlei.</p>
 
-          <p>
-            Alto rendimento |
-            Prevenção de lesões
-          </p>
+          <p>Alto rendimento | Prevenção de lesões</p>
 
-          <p>CREF 000000-G/RJ</p>
+          <p>CREF 048213-G/RJ</p>
 
-          <a href="#">Treinar com esta equipe</a>
+          <a href="agendamento.html">Treinar com esta equipe</a>
         </article>
 
 
         <!--Treinador2-->
-        <article class="treinador">
-          <img src="img/treinador2.png" alt="Treinador 2" />
+        <article class="treinador" data-programa="pkz">
+          <img src="imagens/treinador2.png" alt="Camila Duarte, treinadora da PKZ" />
 
           <p>PKZ</p>
 
-          <h3>NOME DO TREINADOR</h3>
+          <h3>Camila Duarte</h3>
 
-          <p>[Especialidade - ex.: preparação física
-            para adultos]</p>
+          <p>Velocidade, agilidade e coordenação</p>
 
-          <p>
-            [Breve apresentação, formação,
-            experiência e como trabalha
-            com os alunos.]
-          </p>
+          <p>Ex-atleta de atletismo, monta os circuitos de agilidade da PKZ e acompanha a evolução de cada criança nos testes físicos.</p>
 
-          <p>
-            Alto rendimento |
-            Prevenção de lesões
-          </p>
+          <p>Velocidade | Coordenação</p>
 
-          <p>CREF 000000-G/RJ</p>
+          <p>CREF 052907-G/RJ</p>
 
-          <a href="#">Treinar com esta equipe</a>
+          <a href="agendamento.html">Treinar com esta equipe</a>
         </article>
 
         <!--Treinador3-->
-        <article class="treinador">
-          <img src="img/treinador3.png" alt="Treinador 3" />
+        <article class="treinador" data-programa="pkz">
+          <img src="imagens/treinador3.png" alt="Bruno Tavares, treinador da PKZ" />
 
           <p>PKZ</p>
 
-          <h3>NOME DO TREINADOR</h3>
+          <h3>Bruno Tavares</h3>
 
-          <p>[Especialidade - ex.: preparação física
-            para jovens atletas]</p>
+          <p>Força e avaliação física</p>
 
-          <p>
-            [Breve apresentação, formação,
-            experiência e como trabalha
-            com os alunos.]
-          </p>
+          <p>Pós-graduado em fisiologia do exercício, conduz a bateria de 16 testes da PKZ e explica os resultados aos pais e responsáveis.</p>
 
-          <p>
-            Alto rendimento |
-            Prevenção de lesões
-          </p>
+          <p>Avaliação física | Força</p>
 
-          <p>CREF 000000-G/RJ</p>
+          <p>CREF 061354-G/RJ</p>
 
-          <a href="#">Treinar com esta equipe</a>
+          <a href="agendamento.html">Treinar com esta equipe</a>
         </article>
 
         <!--Treinador4-->
-        <article class="treinador">
-          <img src="img/treinador4.png" alt="Treinador 4" />
+        <article class="treinador" data-programa="onetoone">
+          <img src="imagens/treinador4.png" alt="Juliana Costa, treinadora da One to One" />
 
           <p>One to One</p>
 
-          <h3>NOME DO TREINADOR</h3>
+          <h3>Juliana Costa</h3>
 
-          <p>[Especialidade - ex.: preparação física
-            para adultos]</p>
+          <p>Musculação e condicionamento</p>
 
-          <p>
-            [Breve apresentação, formação,
-            experiência e como trabalha
-            com os alunos.]
-          </p>
+          <p>Especialista em musculação para iniciantes e para quem volta a treinar depois de muito tempo parado, sempre com ajuste de carga.</p>
 
-          <p>
-            Alto rendimento |
-            Prevenção de lesões
-          </p>
+          <p>Musculação | Condicionamento</p>
 
-          <p>CREF 000000-G/RJ</p>
+          <p>CREF 039876-G/RJ</p>
 
-          <a href="#">Treinar com esta equipe</a>
+          <a href="agendamento.html">Treinar com esta equipe</a>
         </article>
 
         <!--Treinador5-->
-        <article class="treinador">
-          <img src="img/treinador5.png" alt="Treinador 5" />
+        <article class="treinador" data-programa="onetoone">
+          <img src="imagens/treinador5.png" alt="André Nascimento, treinador da One to One" />
 
           <p>One to One</p>
 
-          <h3>NOME DO TREINADOR</h3>
+          <h3>André Nascimento</h3>
 
-          <p>[Especialidade - ex.: preparação física
-            para adultos]</p>
+          <p>Mobilidade e reabilitação</p>
 
-          <p>
-            [Breve apresentação, formação,
-            experiência e como trabalha
-            com os alunos.]
-          </p>
+          <p>Fisioterapeuta e educador físico, cuida de alunos com dores ou em retorno após lesões, com treinos de mobilidade e fortalecimento.</p>
 
-          <p>
-            Alto rendimento |
-            Prevenção de lesões
-          </p>
+          <p>Mobilidade | Reabilitação</p>
 
-          <p>CREF 000000-G/RJ</p>
+          <p>CREF 044521-G/RJ</p>
 
-          <a href="#">Treinar com esta equipe</a>
+          <a href="agendamento.html">Treinar com esta equipe</a>
         </article>
 
         <!--Treinador6-->
-        <article class="treinador">
-          <img src="img/treinador6.png" alt="Treinador 6" />
+        <article class="treinador" data-programa="onetoone">
+          <img src="imagens/treinador6.png" alt="Marcelo Pires, treinador da One to One" />
 
           <p>One to One</p>
 
-          <h3>NOME DO TREINADOR</h3>
+          <h3>Marcelo Pires</h3>
 
-          <p>[Especialidade - ex.: preparação física
-            para adultos]</p>
+          <p>Treino para a terceira idade</p>
 
-          <p>
-            [Breve apresentação, formação,
-            experiência e como trabalha
-            com os alunos.]
-          </p>
+          <p>Atende alunos de 60 a 90 anos com foco em força, equilíbrio e autonomia para as atividades do dia a dia.</p>
 
-          <p>
-            Alto rendimento |
-            Prevenção de lesões
-          </p>
+          <p>Terceira idade | Equilíbrio</p>
 
-          <p>CREF 000000-G/RJ</p>
+          <p>CREF 057438-G/RJ</p>
 
-          <a href="#">Treinar com esta equipe</a>
+          <a href="agendamento.html">Treinar com esta equipe</a>
         </article>
       </div>
     </section>
@@ -324,7 +270,7 @@
         e treine com a gente.
       </p>
 
-      <a href="#">
+      <a href="agendamento.html">
         Agendar aula experimental →
       </a>
 
@@ -332,6 +278,27 @@
 
 
   </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <section class="rodape-marca" aria-label="PKZ One to One">
+      <a href="index.html" class="logo"><b>PKZ</b><span>One to One</span></a>
+      <p class="rodape-texto">Uma metodologia, dois programas: alto rendimento infantojuvenil e musculação para adultos.</p>
+    </section>
+
+    <nav class="rodape-menu" aria-label="Navegação do rodapé">
+      <h2>Navegação</h2>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="PKZ.html">PKZ</a></li>
+        <li><a href="OnetoOne.html">One to One</a></li>
+        <li><a href="equipe.html">Equipe</a></li>
+        <li><a href="index.html#duvidas">Dúvidas</a></li>
+      </ul>
+    </nav>
+
+    <a class="rodape-link" href="agendamento.html">Agendar aula experimental →</a>
+  </footer>
 
 </body>
 
