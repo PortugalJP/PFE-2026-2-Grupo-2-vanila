@@ -2340,3 +2340,448 @@ h3 {
   color: var(--texto-sobre-destaque);
 }
 
+/* CSS DO AGENDAMENTO */
+
+/* ---------- Estrutura da página ---------- */
+.pagina-agendamento .agendamento {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px 16px 64px;
+}
+
+.pagina-agendamento .eyebrow {
+  margin-bottom: 12px;
+  color: var(--rotulo);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pagina-agendamento .cartao-agenda {
+  padding: 24px 16px;
+  border: 1px solid var(--borda);
+  border-radius: 24px;
+  background-color: var(--cartao);
+}
+
+.pagina-agendamento .cartao-agenda h2 {
+  font-size: 28px;
+}
+
+/* ---------- Escolha do programa ---------- */
+.pagina-agendamento .programas {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 0;
+}
+
+.pagina-agendamento .programa {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  padding: 20px;
+  border: 2px solid var(--borda);
+  border-radius: 22px;
+  background-color: var(--fundo-suave);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.pagina-agendamento .programa:hover {
+  border-color: var(--destaque);
+}
+
+.pagina-agendamento .programa input {
+  width: 22px;
+  height: 22px;
+}
+
+.pagina-agendamento .programa b {
+  color: var(--rotulo);
+  font-family: var(--font-head);
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.pagina-agendamento .programa span {
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Programa escolhido (classe colocada pelo JS) */
+.pagina-agendamento .programa.escolhido {
+  border-color: var(--rotulo);
+  background-color: var(--cartao);
+}
+
+/* ---------- Calendário ---------- */
+.pagina-agendamento .calendario-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.pagina-agendamento .calendario-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.pagina-agendamento .calendario-nav button {
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--borda);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--rotulo);
+}
+
+.pagina-agendamento .calendario-nav button:hover {
+  border-color: var(--destaque);
+}
+
+.pagina-agendamento #mesProximo {
+  border-color: var(--rotulo);
+  background-color: var(--rotulo);
+  color: #ffffff;
+}
+
+.pagina-agendamento button:disabled {
+  opacity: 0.45;
+}
+
+.pagina-agendamento #calendario {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.pagina-agendamento #calendario th {
+  padding: 6px 0 10px;
+  color: var(--texto-suave);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.pagina-agendamento #calendario td {
+  padding: 3px;
+}
+
+.pagina-agendamento #calendario .domingo {
+  color: var(--texto-suave);
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.pagina-agendamento .dia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  min-height: 44px;
+  border: 1.5px solid var(--borda);
+  border-radius: 10px;
+  background-color: var(--fundo-suave);
+  color: var(--texto);
+  font-weight: 700;
+  transition: border-color 0.2s;
+}
+
+.pagina-agendamento .dia:hover {
+  border-color: var(--destaque);
+}
+
+.pagina-agendamento .dia.selecionado {
+  border-color: var(--rotulo);
+  background-color: var(--rotulo);
+  color: #ffffff;
+}
+
+.pagina-agendamento .ponto {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--destaque);
+}
+
+.pagina-agendamento .selecionado .ponto {
+  background-color: #ffffff;
+}
+
+.pagina-agendamento .legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.pagina-agendamento .legenda span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagina-agendamento .legenda .ponto {
+  width: 10px;
+  height: 10px;
+}
+
+.pagina-agendamento .quadrado {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background-color: var(--rotulo);
+}
+
+/* ---------- Horários ---------- */
+.pagina-agendamento #dataTexto {
+  margin: 6px 0 16px;
+  color: var(--rotulo);
+  font-weight: 600;
+}
+
+.pagina-agendamento .lista-horarios {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pagina-agendamento .horario {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 18px;
+  border: 1.5px solid var(--borda);
+  border-radius: 14px;
+  background-color: transparent;
+  color: var(--texto);
+  font-weight: 700;
+  transition: border-color 0.2s;
+}
+
+.pagina-agendamento .horario:hover {
+  border-color: var(--destaque);
+}
+
+.pagina-agendamento .horario span + span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pagina-agendamento .horario.selecionado {
+  border-color: var(--destaque);
+  background-color: var(--destaque);
+  color: #000000;
+}
+
+.pagina-agendamento .horario:disabled {
+  background-color: var(--fundo-suave);
+  color: var(--texto-suave);
+}
+
+/* ---------- Resumo e formulário ---------- */
+.pagina-agendamento .resumo {
+  border-color: var(--rotulo);
+  background-color: var(--rotulo);
+  color: #ffffff;
+}
+
+.pagina-agendamento .resumo h2 {
+  margin-bottom: 12px;
+}
+
+.pagina-agendamento .resumo dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.pagina-agendamento .resumo dt,
+.pagina-agendamento .resumo dd {
+  width: 50%;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pagina-agendamento .resumo dt {
+  color: #b3ecff;
+}
+
+.pagina-agendamento .resumo dd {
+  font-weight: 700;
+  text-align: right;
+}
+
+.pagina-agendamento .resumo label {
+  display: block;
+  margin: 16px 0 8px;
+  color: #b3ecff;
+  font-weight: 700;
+}
+
+.pagina-agendamento .resumo input {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.pagina-agendamento .resumo input:focus {
+  border-color: var(--destaque);
+}
+
+.pagina-agendamento .botao-enviar {
+  width: 100%;
+  min-height: 54px;
+  margin-top: 24px;
+  border: 0;
+  border-radius: 999px;
+  background-color: var(--destaque);
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+  transition: background-color 0.2s;
+}
+
+.pagina-agendamento .botao-enviar:hover {
+  background-color: #b3ecff;
+}
+
+.pagina-agendamento #mensagem {
+  min-height: 1.4em;
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+.pagina-agendamento #mensagem.erro {
+  color: #ffd2cc;
+}
+
+.pagina-agendamento #mensagem.sucesso {
+  color: #b9f5d0;
+}
+
+.pagina-agendamento .botao-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: #014c6f;
+  font-weight: 700;
+}
+
+.pagina-agendamento .botao-whatsapp[hidden] {
+  display: none;
+}
+
+/* ---------- Botões de teste ---------- */
+.pagina-agendamento .testes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pagina-agendamento .testes button {
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px dashed var(--texto-suave);
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--texto-suave);
+  font-size: 14px;
+}
+
+.pagina-agendamento #dados {
+  overflow-x: auto;
+  padding: 16px;
+  border-radius: 14px;
+  background-color: var(--fundo-suave);
+  font-size: 14px;
+}
+
+.pagina-agendamento #dados[hidden] {
+  display: none;
+}
+
+/* ---------- Tablet (768px) ---------- */
+@media (min-width: 768px) {
+  .pagina-agendamento .agendamento {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding: 56px 32px 96px;
+  }
+
+  .pagina-agendamento .agendamento-titulo,
+  .pagina-agendamento .programas,
+  .pagina-agendamento .resumo,
+  .pagina-agendamento .testes,
+  .pagina-agendamento #dados {
+    width: 100%;
+  }
+
+  .pagina-agendamento .programas {
+    flex-direction: row;
+  }
+
+  .pagina-agendamento .programa {
+    flex: 1;
+  }
+
+  .pagina-agendamento .calendario {
+    width: calc(60% - 12px);
+  }
+
+  .pagina-agendamento .horarios {
+    width: calc(40% - 12px);
+  }
+
+  .pagina-agendamento .cartao-agenda {
+    padding: 28px;
+  }
+
+  .pagina-agendamento .dia {
+    min-height: 54px;
+    border-radius: 14px;
+  }
+}
+
+/* ---------- Desktop (1024px) ---------- */
+@media (min-width: 1024px) {
+  .pagina-agendamento .agendamento {
+    padding: 56px max(24px, calc((100% - 1200px) / 2)) 96px;
+  }
+
+  .pagina-agendamento .calendario {
+    width: calc(42% - 16px);
+  }
+
+  .pagina-agendamento .horarios {
+    width: calc(25% - 16px);
+  }
+
+  .pagina-agendamento .resumo {
+    width: calc(33% - 16px);
+  }
+}
