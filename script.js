@@ -1,4 +1,34 @@
 /* JS GERAL */
+// Tema compartilhado entre todas as páginas.
+const temaSalvo = localStorage.getItem("tema");
+const temaInicial = temaSalvo === "escuro" ? "escuro" : "claro";
+document.documentElement.dataset.tema = temaInicial;
+
+const cabecalho = document.querySelector(".cabecalho");
+if (cabecalho && !document.getElementById("temaBtn")) {
+  const temaButton = document.createElement("button");
+  temaButton.type = "button";
+  temaButton.id = "temaBtn";
+  temaButton.className = "tema-btn";
+  temaButton.addEventListener("click", () => {
+    const novoTema = document.documentElement.dataset.tema === "escuro" ? "claro" : "escuro";
+    document.documentElement.dataset.tema = novoTema;
+    localStorage.setItem("tema", novoTema);
+    atualizarBotaoTema();
+  });
+
+  function atualizarBotaoTema() {
+    const temaEscuro = document.documentElement.dataset.tema === "escuro";
+    temaButton.innerHTML = `<span aria-hidden="true">${temaEscuro ? "☀" : "☾"}</span>`;
+    temaButton.setAttribute("aria-label", temaEscuro ? "Ativar modo claro" : "Ativar modo escuro");
+    temaButton.title = temaEscuro ? "Ativar modo claro" : "Ativar modo escuro";
+  }
+
+  atualizarBotaoTema();
+  const menuButton = cabecalho.querySelector(".menu-btn");
+  cabecalho.insertBefore(temaButton, menuButton || null);
+}
+
 const button = document.getElementById("menuBtn");
 const menu = document.getElementById("nav");
 

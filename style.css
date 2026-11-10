@@ -1,5 +1,6 @@
 /* CORES */
 :root {
+  color-scheme: light;
   --fundo: #ffffff;
   --fundo-suave: #f2fbff;
   --fundo-destaque: #014c6f;
@@ -24,6 +25,31 @@
 
   --font-head: "Barlow Condensed", "Arial Narrow", sans-serif;
   --font-body: "Manrope", Arial, sans-serif;
+}
+
+:root[data-tema="escuro"] {
+  color-scheme: dark;
+  --fundo: #101820;
+  --fundo-suave: #172630;
+  --fundo-destaque: #0a2b3e;
+  --cartao: #1b2b36;
+  --cabecalho: #131e27;
+  --borda: #315367;
+  --texto: #f2f6f8;
+  --texto-suave: #bfd0da;
+  --rotulo: #4caacc;
+  --destaque: #00bbff;
+  --texto-sobre-destaque: #06131b;
+  --texto-hero: #f5fbff;
+  --texto-hero-suave: #c6d9e3;
+  --menu-link: #e1edf2;
+  --menu-ativo: #ffffff;
+  --rodape: #080f15;
+  --rodape-texto: #f2f6f8;
+  --card-visita: #12394e;
+  --card-visita-texto: #ffffff;
+  --card-visita-link: #c6eafa;
+  --logo: #9fe5ff;
 }
 
 
@@ -141,6 +167,31 @@ h3 {
   border: 0;
 }
 
+.tema-btn {
+  display: inline-grid;
+  flex: 0 0 42px;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-left: auto;
+  border: 1px solid var(--borda);
+  border-radius: 50%;
+  background: var(--fundo-suave);
+  color: var(--texto);
+  font-size: 21px;
+  line-height: 1;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.tema-btn:hover {
+  border-color: var(--destaque);
+  background: var(--fundo);
+}
+
+.tema-btn + .menu-btn {
+  margin-left: 0;
+}
+
 .menu-btn span {
   width: 24px;
   height: 2px;
@@ -256,6 +307,10 @@ h3 {
 
   .menu-btn {
     display: none;
+  }
+
+  .tema-btn {
+    margin-left: 0;
   }
 
   .menu {
@@ -2722,6 +2777,74 @@ h3 {
 
 .pagina-agendamento #dados[hidden] {
   display: none;
+}
+
+/* ---------- Tema escuro ---------- */
+:root[data-tema="escuro"] body {
+  color: var(--texto);
+}
+
+:root[data-tema="escuro"] .pagina-landing .faq-panel,
+:root[data-tema="escuro"] .pagina-landing .faq-question[aria-expanded="true"] {
+  background-color: var(--cartao);
+  color: var(--texto);
+}
+
+:root[data-tema="escuro"] .pagina-landing .faq-panel a {
+  color: #74d8ff;
+}
+
+:root[data-tema="escuro"] .pagina-landing .faq-question[aria-expanded="true"] {
+  border-bottom: 1px solid var(--borda);
+}
+
+:root[data-tema="escuro"] .pagina-landing .faq-panel {
+  color: var(--texto-suave);
+}
+
+:root[data-tema="escuro"] .pagina-landing .botao-escuro,
+:root[data-tema="escuro"] .pagina-oto .btn--black,
+:root[data-tema="escuro"] .pagina-pkz .button-dark {
+  background-color: #d9edf5;
+  color: #08141b;
+}
+
+:root[data-tema="escuro"] .pagina-landing .botao-escuro:hover,
+:root[data-tema="escuro"] .pagina-oto .btn--black:hover,
+:root[data-tema="escuro"] .pagina-pkz .button-dark:hover {
+  background-color: #a9dced;
+  color: #08141b;
+}
+
+:root[data-tema="escuro"] .pagina-agendamento .resumo {
+  background-color: #0a2b3e;
+  color: var(--texto);
+}
+
+:root[data-tema="escuro"] .pagina-agendamento .resumo input,
+:root[data-tema="escuro"] .pagina-agendamento .botao-whatsapp {
+  border-color: var(--borda);
+  background-color: #1b2b36;
+  color: var(--texto);
+}
+
+:root[data-tema="escuro"] .pagina-agendamento .botao-whatsapp {
+  color: #9fe5ff;
+}
+
+:root[data-tema="escuro"] .pagina-agendamento .dia.selecionado,
+:root[data-tema="escuro"] .pagina-agendamento .horario.selecionado {
+  color: #06131b;
+}
+
+:root[data-tema="escuro"] .pagina-agendamento .resumo dt,
+:root[data-tema="escuro"] .pagina-agendamento .resumo label {
+  color: #9fe5ff;
+}
+
+:root[data-tema="escuro"] .pagina-equipe .agendamento a {
+  background-color: #08141b;
+  color: #ffffff;
 }
 
 /* ---------- Tablet (768px) ---------- */
