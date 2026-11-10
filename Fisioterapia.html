@@ -1,91 +1,264 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fisioterapia | PKZ One to One</title>
-  <meta name="description" content="Fisioterapia, mobilidade e reabilitação com acompanhamento individualizado.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="pagina-oto">
-  <header class="cabecalho">
-    <a href="index.html" class="logo"><b>PKZ</b><span>One to One</span></a>
-    <nav id="nav" class="menu" aria-label="Menu principal">
-      <ul class="menu-lista">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="PKZ.html">PKZ</a></li>
-        <li><a href="OnetoOne.html">One to One</a></li>
-        <li><a href="Fisioterapia.html" class="active">Fisioterapia</a></li>
-        <li><a href="equipe.html">Equipe</a></li>
-        <li><a href="index.html#duvidas">Dúvidas</a></li>
-      </ul>
-    </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false"><span></span><span></span></button>
-  </header>
-  <main>
-    <section class="hero" id="inicio">
-      <div class="container hero__inner">
-        <div class="hero__text">
-          <p class="eyebrow eyebrow--light">Fisioterapia · Mobilidade e reabilitação</p>
-          <h1>Movimento com<br><span class="destaque">mais confiança</span></h1>
-          <p class="lead">Cuidado individualizado para recuperar movimentos, desenvolver mobilidade e voltar às atividades do dia a dia com mais segurança.</p>
-          <ul class="tags"><li>Acompanhamento individual</li><li>Mobilidade</li><li>Reabilitação</li></ul>
-          <div class="actions">
-            <a href="agendamento.html" class="btn btn--primary"><i class="fa-regular fa-calendar"></i> Agendar uma conversa</a>
-            <a href="#metodologia" class="btn btn--outline">Conhecer o acompanhamento</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fisioterapia | PKZ One to One</title>
+    <meta
+      name="description"
+      content="Fisioterapia, mobilidade e reabilitação com acompanhamento individualizado."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="pagina-oto">
+    <header class="cabecalho">
+      <a href="index.html" class="logo"><b>PKZ</b><span>One to One</span></a>
+      <nav id="nav" class="menu" aria-label="Menu principal">
+        <ul class="menu-lista">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="PKZ.html">PKZ</a></li>
+          <li><a href="OnetoOne.html">One to One</a></li>
+          <li><a href="Fisioterapia.html" class="active">Fisioterapia</a></li>
+          <li><a href="equipe.html">Equipe</a></li>
+          <li><a href="index.html#duvidas">Dúvidas</a></li>
+        </ul>
+      </nav>
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Abrir menu"
+        aria-controls="nav"
+        aria-expanded="false"
+      >
+        <span></span><span></span>
+      </button>
+    </header>
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container hero__inner">
+          <div class="hero__text">
+            <p class="eyebrow eyebrow--light">
+              Fisioterapia · Mobilidade e reabilitação
+            </p>
+            <h1>
+              Movimento com<br /><span class="destaque">mais confiança</span>
+            </h1>
+            <p class="lead">
+              Cuidado individualizado para recuperar movimentos, desenvolver
+              mobilidade e voltar às atividades do dia a dia com mais segurança.
+            </p>
+            <ul class="tags">
+              <li>Acompanhamento individual</li>
+              <li>Mobilidade</li>
+              <li>Reabilitação</li>
+            </ul>
+            <div class="actions">
+              <a href="agendamento.html" class="btn btn--primary"
+                ><i class="fa-regular fa-calendar"></i> Agendar uma conversa</a
+              >
+              <a href="#metodologia" class="btn btn--outline"
+                >Conhecer o acompanhamento</a
+              >
+            </div>
+          </div>
+          <img
+            class="hero__img"
+            src="imagens/15-pagina-one-to-one-topo.jpg"
+            alt="Treinadora orientando uma aluna durante um exercício"
+          />
+        </div>
+      </section>
+      <section class="section" id="publico">
+        <div class="container">
+          <div class="section__head">
+            <div>
+              <p class="eyebrow">Cuidado individualizado</p>
+              <h2>Para quem é a fisioterapia</h2>
+            </div>
+            <span class="pill">Cada pessoa, um plano</span>
+          </div>
+          <div class="grid grid--3">
+            <article class="card card--accent">
+              <span class="num">01</span>
+              <h3>Recuperar movimentos</h3>
+              <p>
+                Para quem busca retomar movimentos e atividades após uma lesão
+                ou período de limitação.
+              </p>
+            </article>
+            <article class="card card--dark">
+              <span class="num">02</span>
+              <h3>Ganhar mobilidade</h3>
+              <p>
+                Para quem quer trabalhar mobilidade, função e confiança nos
+                movimentos do cotidiano.
+              </p>
+            </article>
+            <article class="card card--dark">
+              <span class="num">03</span>
+              <h3>Voltar à rotina</h3>
+              <p>
+                Um acompanhamento pensado para apoiar o retorno gradual às
+                atividades e aos exercícios.
+              </p>
+            </article>
           </div>
         </div>
-        <img class="hero__img" src="imagens/15-pagina-one-to-one-topo.jpg" alt="Treinadora orientando uma aluna durante um exercício">
-      </div>
-    </section>
-    <section class="section" id="publico">
-      <div class="container">
-        <div class="section__head"><div><p class="eyebrow">Cuidado individualizado</p><h2>Para quem é a fisioterapia</h2></div><span class="pill">Cada pessoa, um plano</span></div>
-        <div class="grid grid--3">
-          <article class="card card--accent"><span class="num">01</span><h3>Recuperar movimentos</h3><p>Para quem busca retomar movimentos e atividades após uma lesão ou período de limitação.</p></article>
-          <article class="card card--dark"><span class="num">02</span><h3>Ganhar mobilidade</h3><p>Para quem quer trabalhar mobilidade, função e confiança nos movimentos do cotidiano.</p></article>
-          <article class="card card--dark"><span class="num">03</span><h3>Voltar à rotina</h3><p>Um acompanhamento pensado para apoiar o retorno gradual às atividades e aos exercícios.</p></article>
+      </section>
+      <section class="section section--deep" id="historia">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Nosso cuidado</p>
+            <h2>Movimento como parte da sua evolução</h2>
+            <p class="muted">
+              A fisioterapia integra o cuidado oferecido pela equipe PKZ One to
+              One. O atendimento considera as necessidades e os objetivos de
+              cada pessoa, com atenção à mobilidade, à reabilitação e à retomada
+              das atividades.
+            </p>
+            <div class="focus">
+              <p class="focus-label">Nosso foco</p>
+              <p class="focus-texto">
+                Acompanhar cada etapa com escuta, orientação e exercícios
+                adequados ao momento e à evolução de cada pessoa.
+              </p>
+            </div>
+          </div>
+          <aside class="timeline">
+            <h3>Etapas do acompanhamento</h3>
+            <ol>
+              <li>
+                <strong>01</strong
+                ><span
+                  >Conversa sobre suas necessidades, rotina e objetivos.</span
+                >
+              </li>
+              <li>
+                <strong>02</strong
+                ><span>Avaliação para compreender seu ponto de partida.</span>
+              </li>
+              <li>
+                <strong>03</strong
+                ><span>Plano individual de cuidado e exercícios.</span>
+              </li>
+              <li>
+                <strong>04</strong
+                ><span
+                  >Acompanhamento da evolução e ajustes ao longo do
+                  processo.</span
+                >
+              </li>
+            </ol>
+          </aside>
         </div>
-      </div>
-    </section>
-    <section class="section section--deep" id="historia">
-      <div class="container split">
-        <div>
-          <p class="eyebrow">Nosso cuidado</p><h2>Movimento como parte da sua evolução</h2>
-          <p class="muted">A fisioterapia integra o cuidado oferecido pela equipe PKZ One to One. O atendimento considera as necessidades e os objetivos de cada pessoa, com atenção à mobilidade, à reabilitação e à retomada das atividades.</p>
-          <div class="focus"><p class="focus-label">Nosso foco</p><p class="focus-texto">Acompanhar cada etapa com escuta, orientação e exercícios adequados ao momento e à evolução de cada pessoa.</p></div>
+      </section>
+      <section class="section" id="metodologia">
+        <div class="container">
+          <div class="section__head section__head--end">
+            <div>
+              <p class="eyebrow">Como funciona</p>
+              <h2>Um plano construído com você</h2>
+            </div>
+            <p class="muted side-note">
+              O acompanhamento respeita suas necessidades e avança conforme sua
+              resposta ao processo.
+            </p>
+          </div>
+          <div class="grid grid--4">
+            <article class="card card--outline">
+              <span class="step">1</span>
+              <h3>Escuta e avaliação</h3>
+              <p>
+                Entendimento da sua rotina, histórico, necessidades e objetivos.
+              </p>
+            </article>
+            <article class="card card--outline">
+              <span class="step">2</span>
+              <h3>Plano individual</h3>
+              <p>
+                Definição das prioridades e das atividades adequadas ao seu
+                momento.
+              </p>
+            </article>
+            <article class="card card--outline">
+              <span class="step">3</span>
+              <h3>Acompanhamento próximo</h3>
+              <p>
+                Orientação durante os exercícios e atenção à qualidade do
+                movimento.
+              </p>
+            </article>
+            <article class="card card--outline">
+              <span class="step">4</span>
+              <h3>Evolução gradual</h3>
+              <p>
+                Revisão do plano conforme seus avanços e as necessidades
+                identificadas.
+              </p>
+            </article>
+          </div>
         </div>
-        <aside class="timeline"><h3>Etapas do acompanhamento</h3><ol>
-          <li><strong>01</strong><span>Conversa sobre suas necessidades, rotina e objetivos.</span></li>
-          <li><strong>02</strong><span>Avaliação para compreender seu ponto de partida.</span></li>
-          <li><strong>03</strong><span>Plano individual de cuidado e exercícios.</span></li>
-          <li><strong>04</strong><span>Acompanhamento da evolução e ajustes ao longo do processo.</span></li>
-        </ol></aside>
-      </div>
-    </section>
-    <section class="section" id="metodologia">
-      <div class="container">
-        <div class="section__head section__head--end"><div><p class="eyebrow">Como funciona</p><h2>Um plano construído com você</h2></div><p class="muted side-note">O acompanhamento respeita suas necessidades e avança conforme sua resposta ao processo.</p></div>
-        <div class="grid grid--4">
-          <article class="card card--outline"><span class="step">1</span><h3>Escuta e avaliação</h3><p>Entendimento da sua rotina, histórico, necessidades e objetivos.</p></article>
-          <article class="card card--outline"><span class="step">2</span><h3>Plano individual</h3><p>Definição das prioridades e das atividades adequadas ao seu momento.</p></article>
-          <article class="card card--outline"><span class="step">3</span><h3>Acompanhamento próximo</h3><p>Orientação durante os exercícios e atenção à qualidade do movimento.</p></article>
-          <article class="card card--outline"><span class="step">4</span><h3>Evolução gradual</h3><p>Revisão do plano conforme seus avanços e as necessidades identificadas.</p></article>
+      </section>
+      <section class="section section--deep section--tight">
+        <div class="container">
+          <div class="banner">
+            <div>
+              <h3>Quer continuar treinando?</h3>
+              <p>
+                A One to One oferece musculação e condicionamento
+                individualizados para adultos.
+              </p>
+            </div>
+            <a href="OnetoOne.html" class="btn btn--outline"
+              >Conhecer a One to One <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="section section--deep section--tight"><div class="container"><div class="banner"><div><h3>Quer continuar treinando?</h3><p>A One to One oferece musculação e condicionamento individualizados para adultos.</p></div><a href="OnetoOne.html" class="btn btn--outline">Conhecer a One to One <i class="fa-solid fa-arrow-right"></i></a></div></div></section>
-    <section class="cta" id="agendar"><div class="container cta__inner"><div><h2>Vamos conversar sobre seu cuidado?</h2><p>Entre em contato com a equipe para conhecer o atendimento e tirar suas dúvidas.</p></div><a href="agendamento.html" class="btn btn--black"><i class="fa-regular fa-calendar"></i> Ir para agendamento</a></div></section>
-  </main>
-  <footer class="rodape">
-    <section class="rodape-marca" aria-label="PKZ One to One"><a href="index.html" class="logo"><b>PKZ</b><span>One to One</span></a><p class="rodape-texto">Preparação física, musculação e cuidado com o movimento.</p></section>
-    <nav class="rodape-menu" aria-label="Navegação do rodapé"><h2>Navegação</h2><ul><li><a href="index.html">Início</a></li><li><a href="PKZ.html">PKZ</a></li><li><a href="OnetoOne.html">One to One</a></li><li><a href="Fisioterapia.html">Fisioterapia</a></li><li><a href="equipe.html">Equipe</a></li></ul></nav>
-    <a class="rodape-link" href="agendamento.html">Falar com a equipe →</a>
-  </footer>
-  <script src="script.js"></script>
-</body>
+      </section>
+      <section class="cta" id="agendar">
+        <div class="container cta__inner">
+          <div>
+            <h2>Vamos conversar sobre seu cuidado?</h2>
+            <p>
+              Entre em contato com a equipe para conhecer o atendimento e tirar
+              suas dúvidas.
+            </p>
+          </div>
+          <a href="agendamento.html" class="btn btn--black"
+            ><i class="fa-regular fa-calendar"></i> Ir para agendamento</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="rodape">
+      <section class="rodape-marca" aria-label="PKZ One to One">
+        <a href="index.html" class="logo"><b>PKZ</b><span>One to One</span></a>
+        <p class="rodape-texto">
+          Preparação física, musculação e cuidado com o movimento.
+        </p>
+      </section>
+      <nav class="rodape-menu" aria-label="Navegação do rodapé">
+        <h2>Navegação</h2>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="PKZ.html">PKZ</a></li>
+          <li><a href="OnetoOne.html">One to One</a></li>
+          <li><a href="Fisioterapia.html">Fisioterapia</a></li>
+          <li><a href="equipe.html">Equipe</a></li>
+        </ul>
+      </nav>
+      <a class="rodape-link" href="agendamento.html">Falar com a equipe →</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
